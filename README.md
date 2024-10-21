@@ -115,9 +115,9 @@ Prompt15:
 i want the uncertainty looks like the funnel like this picture
 
 Prompt16:
+this is my result, why the uncertainty interval doesn't have this feature :The closer the time is to now, the prediction interval will be more convergent; conversely, the further the time is from now, the larger the prediction interval will be, indicating that the uncertainty will be higher.
 
 Prompt17:
+model = Prophet(interval_width=0.95, changepoint_prior_scale=0.5, uncertainty_samples=10) what's every parameters in the code
 
-Prompt18:
-
-Prompt1:
+final result
