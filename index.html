@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Forecast</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #333; }
+        form { margin-bottom: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .upload-section { background-color: #f2f2f2; padding: 20px; border-radius: 5px; }
+        .upload-section h2 { margin-top: 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Price Forecast</h1>
+
+        <div class="upload-section">
+            <h2>Upload your CSV file</h2>
+            <form action="/" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" required>
+                <button type="submit">Upload and Forecast</button>
+            </form>
+
+            {% if uploaded %}
+            <p><strong>Uploaded file:</strong> {{ filename }}</p>
+            <h3>According to your data, here is the Forecast Plot:</h3>
+            <img src="{{ plot_url }}" alt="Forecast Plot" style="max-width: 100%; border: 1px solid #ccc;">
+            {% endif %}
+        
+        </div>
+
+        <div class="example-section">
+            <h2>Example File Format</h2>
+            <p>Your CSV file should have the following columns:</p>
+            <pre>
+Date,x1,x2,x3,x4,x5,x6
+12/01/2020,500,520,510,530,540,550
+12/02/2020,510,525,515,535,545,555
+...
+            </pre>
+        </div>
+    </div>
+</body>
+</html>
