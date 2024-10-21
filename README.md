@@ -1,6 +1,7 @@
 # -AIoT-DA_HW1-2_StockPriceForecast
 用Prophet根據2330.csv進行股價預測分析並產生未來5個月的股價預測及信心區間
 
+# Here is a brief illustration of the prompting process of StockPriceForecast without showing the pictures, watch the HW1-2 StockPriceForecast.pdf for more detail and pictures.
 -------------------------------------------------------------------
 # Prompt1:
 根據檔案2330-training.csv，用python去 solve "auto regression" problem，要照著CRISP-datamining(DM)的步驟，1.)將檔案2330-training.csv中的A column 當作附圖中的x軸並標示年分，2.)用檔案2330-training.csv中的B到G column各別代表的x1到x6當作"auto regression" problem中的輸入，並預測出y軸，也就是附圖的當日收盤價，做出像附圖一樣的圖，並要包含 1. feature selection 2. model evaluation 3. web implementation deployment 4. 預測未來12個月分別的收盤價並產生預測範圍的漏斗圖 (websim) 
@@ -119,4 +120,21 @@ this is my result, why the uncertainty interval doesn't have this feature :The c
 # Prompt17:
 model = Prophet(interval_width=0.95, changepoint_prior_scale=0.5, uncertainty_samples=10) what's every parameters in the code
 
+# Prompt18:
+幫我用以上的code做成一個web(html)讓使用者可以上傳他的檔案，並在下方加入一個輸入檔
+案的格式範例應該要是甚麼樣子
+
+# Prompt19:
+為甚麼無法產生圖片
+
+# Prompt20:
+forecast_plot.png 圖片不存在
+
+# Prompt21:
+幫我在網頁上加上使用者上傳的檔案名稱，並顯示according to your data, here is the
+Forecast Plot: 並顯示預測圖片
+
 # final result
+1.The Forecast Plot of 2330-training.csv runs in terminal.
+2.The website version of uploading user's file and showing Forecast Plot of 2330-training.csv.
+3.The website version of uploading user's file and showing Forecast Plot of 2331-training.csv.
